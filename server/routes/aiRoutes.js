@@ -4,8 +4,26 @@ const router = express.Router();
 
 const protect = require("../middleware/authMiddleware");
 
-const { generateInsights } = require("../controllers/aiController");
+const {
+  generateInsights,
+
+  getReportHistory,
+} = require("../controllers/aiController");
 
 router.get("/report", protect, generateInsights);
 
+router.get("/history", protect, getReportHistory);
+
 module.exports = router;
+
+// const express = require("express");
+
+// const router = express.Router();
+
+// const protect = require("../middleware/authMiddleware");
+
+// const { generateInsights } = require("../controllers/aiController");
+
+// router.get("/report", protect, generateInsights);
+
+// module.exports = router;
