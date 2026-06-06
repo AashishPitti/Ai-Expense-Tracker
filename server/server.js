@@ -30,6 +30,8 @@ app.use("/api/expenses", require("./routes/expenseRoutes"));
 
 app.use("/api/analytics", require("./routes/analyticsRoutes"));
 
+app.use("/api/ai", require("./routes/aiRoutes"));
+
 app.listen(process.env.PORT, () => {
   console.log(`Server running on ${process.env.PORT}`);
 });

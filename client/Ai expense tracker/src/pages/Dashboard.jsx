@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import ExpenseForm from "../components/ExpenseForm";
@@ -115,6 +116,10 @@ export default function Dashboard() {
           onDelete={removeExpense}
           onEdit={setEditingExpense}
         />
+
+        <Link to="/ai-insights">
+          <button>Generate AI Report</button>
+        </Link>
       </div>
     </>
   );
